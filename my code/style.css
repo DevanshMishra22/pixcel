@@ -1,0 +1,49 @@
+.hero-button {
+  border: 2px solid rgb(82, 77, 77);
+}
+.text-hero {
+  color: black;
+}
+.model img {
+  width: 600px;
+  height: 300px;
+}
+.her {
+  width: 80%;
+  margin: auto;
+}
+.her_heading {
+  margin-left: 7rem;
+}
+.her_button {
+  border: 1px solid black;
+  color: black;
+}
+.section_card {
+  width: 80%;
+}
+.card1 {
+  width: 80%;
+  border: none;
+}
+.lastdiv {
+  width: 80%;
+  margin: auto;
+}
+.arrow {
+  border: 1px solid black;
+}
+.navvigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  font-size: 2.5rem;
+}
+.footter {
+  background: url("bgfooter.avif");
+}
+.hero {
+  height: 500px;
+}

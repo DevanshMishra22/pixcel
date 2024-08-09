@@ -1,0 +1,233 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+		<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="flex items-center justify-between p-4 bg-white dark:bg-background ">
+  <div class="flex items-center">
+	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search mr-4" viewBox="0 0 16 16">
+		<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+	  </svg>
+	</div>
+    <div class="text-2xl  font-bold text-primary heading">mapu</div>
+  
+  <div class="flex items-center">
+    <span class="text-muted-foreground">INR</span>
+	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-dash ml-4" viewBox="0 0 16 16">
+		<path fill-rule="evenodd" d="M5.5 10a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5"/>
+		<path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+	  </svg>
+	  
+	</div>
+	
+</nav>
+<div class=" navvigation space-x-6">
+	<a href="#" class="text-muted-foreground hover:text-primary">ABOUT</a>
+	<a href="#" class="text-muted-foreground hover:text-primary">FOR HIM</a>
+	<a href="#" class="text-muted-foreground hover:text-primary">FOR HER</a>
+	<a href="#" class="text-muted-foreground hover:text-primary">ACCESSORIES</a>
+	<a href="#" class="text-muted-foreground hover:text-primary">CONTACT</a>
+  </div>
+<div class="flex flex-col md:flex-row items-center justify-between p-8 bg-background">
+  <div class="md:w-1/2 relative">
+    <div class="absolute inset-0 flex flex-col items-center justify-center">
+      <h1 class="text-4xl font-bold text-center text-foreground">Resort 2024</h1>
+      <p class="text-lg  text-center text-hero">Wear your Wanderlust</p>
+      <button class="bg-transparent hero-button  text-secondary-foreground hover:bg-secondary/80 mt-4 px-4 py-2 rounded-lg">SHOP NOW</button>
+    </div>
+    <img src="hhero.avif" alt="Model showcasing fashion" class="w-full h-auto rounded-lg hero" />
+  </div>
+  <div class="md:w-1/2 mt-8 md:mt-0">
+    <img src="hello.png" alt="showcasing fashion" class="w-full h-auto rounded-lg" />
+  </div>
+</div>
+<div class="flex flex-row md:flex-row items-center p-6 bg-background her">
+	<div class="md:w-1/2 flex model">
+	  <img class=" h-auto rounded-lg" src="h2.png" alt="Model wearing a pink dress" />
+	  <img class=" h-auto rounded-lg" src="p2.png" alt="Model wearing a pink dress" />
+	</div>
+	<div class="md:w-1/2 md:pl-6 her_heading" >
+	  <h2 class="text-2xl font-bold text-primary">For Her</h2>
+	  <p class="mt-4 text-muted-foreground">
+		MAPU'S style narrative mirrors the fluidity of the modern day nomad - dynamic, innovative, and endlessly exploring. MAPU embraces the changes and shifts in both personalities and situations,
+		seamlessly transitioning from dawn to dusk, day to night, and city life to holiday life.
+	  </p>
+	  <a href="#" class="her_button mt-6 inline-block bg-secondary text-secondary-foreground hover:bg-secondary/80 py-2 px-4 rounded-lg">Shop Now</a>
+	</div>
+  </div>
+  <section class="py-10">
+	<h2 class="text-center text-3xl font-bold mb-4">Featured</h2>
+	<div class="flex flex-wrap justify-center">
+	  <div class="max-w-xs text-center">
+		<img src="m1.png" alt="Mashed Men's Tank" class=" h-auto rounded-lg card1" />
+		<h3 class="mt-4 text-lg font-semibold">Mashed Men's Tank</h3>
+	  </div>
+	  <div class="max-w-xs text-center">
+		<img src="m2.png" alt="Printed Linen Blazer" class=" h-auto rounded-lg card1" />
+		<h3 class="mt-4 text-lg font-semibold">Printed Linen Blazer</h3>
+	  </div>
+	  <div class="max-w-xs text-center">
+		<img src="m3.png" alt="Linen Blazer Set" class=" h-auto rounded-lg card1" />
+		<h3 class="mt-4 text-lg font-semibold">Linen Blazer Set</h3>
+	  </div>
+	  <div class="max-w-xs text-center">
+		<img src="m4.png" alt="Pomegranate Maxi Dress" class=" h-auto rounded-lg card1" />
+		<h3 class="mt-4 text-lg font-semibold">Pomegranate Maxi Dress</h3>
+	  </div>
+	</div>
+  </section>
+
+  <div class="flex flex-col md:flex-row items-center p-6 bg-background lastdiv">
+	<div class="md:w-1/2">
+	  <h2 class="text-2xl font-bold text-primary">For Him</h2>
+	  <p class="mt-2 text-muted-foreground">
+		For wanderlust-driven explorers and globally aware individuals, MAPU suits the lifestyles of confident, self-expressive, and unique individuals and has its pulse on the International fashion
+		language.
+	  </p>
+	  <a href="#" class="mt-4 inline-block bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded-lg"> Shop Now </a>
+	</div>
+	<div class="md:w-1/2 flex justify-center mt-4 md:mt-0">
+	  <img src="m5.png" alt="Fashion Model 1" class="rounded-lg shadow-lg" />
+	  <img src="m6.png" alt="Fashion Model 2" class="rounded-lg shadow-lg ml-4" />
+	</div>
+  </div>
+  <div class="bg-card text-foreground p-8 footter">
+	<div class="flex flex-col md:flex-row justify-between">
+	  <div class="mb-6 md:mb-0">
+		<h1 class="text-3xl font-bold">mapu</h1>
+		<p class="text-muted-foreground">MAPU’S style narrative mirrors the fluidity of the modern day nomad - dynamic, innovative.</p>
+		<div class="flex space-x-4 mt-4">
+		  <a href="#" class="text-muted-foreground hover:text-primary">Instagram</a>
+		  <a href="#" class="text-muted-foreground hover:text-primary">Facebook</a>
+		</div>
+	  </div>
+	  <div class="flex flex-col md:flex-row">
+		<div class="mr-10">
+		  <h2 class="font-semibold">QUICK LINKS</h2>
+		  <ul class="mt-2 space-y-1">
+			<li><a href="#" class="text-muted-foreground hover:text-primary">Home</a></li>
+			<li><a href="#" class="text-muted-foreground hover:text-primary">About</a></li>
+			<li><a href="#" class="text-muted-foreground hover:text-primary">For Him</a></li>
+			<li><a href="#" class="text-muted-foreground hover:text-primary">For Her</a></li>
+			<li><a href="#" class="text-muted-foreground hover:text-primary">Contact</a></li>
+		  </ul>
+		</div>
+		<div class="mr-10">
+		  <h2 class="font-semibold">POLICY</h2>
+		  <ul class="mt-2 space-y-1">
+			<li><a href="#" class="text-muted-foreground hover:text-primary">Terms and Conditions</a></li>
+			<li><a href="#" class="text-muted-foreground hover:text-primary">Privacy Policy</a></li>
+			<li><a href="#" class="text-muted-foreground hover:text-primary">Returns & Refund Policy</a></li>
+			<li><a href="#" class="text-muted-foreground hover:text-primary">Shipping Policy</a></li>
+		  </ul>
+		</div>
+		<div>
+		  <h2 class="font-semibold">NEWSLETTER</h2>
+		  <p class="mt-2 text-muted-foreground">Subscribe to get special offers, and updates</p>
+		  <div class="flex mt-2">
+			<input type="email" placeholder="Email" class="border border-border rounded-l-md p-2 focus:outline-none focus:ring focus:ring-primary" />
+			<button class="bg-transparent text-black-foreground rounded-r-md p-2 arrow">→</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<div class="mt-8 text-center text-muted-foreground">© 2024, Website Developed by A PIXEL HOUSE</div>
+  </div>
+  </body>
+  </body>
+</html>
